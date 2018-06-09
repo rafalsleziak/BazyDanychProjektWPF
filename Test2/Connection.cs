@@ -30,10 +30,7 @@ namespace Test2
                 throw;
             }
 
-            if (connection.State == ConnectionState.Open)
-            {
-                connection.Clone();
-            }
+            
         }
 
         public void InsertListwa(string symbol, string material, string kolor, bool ornament, string okleina, float kosztMb)
@@ -128,6 +125,19 @@ namespace Test2
 
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         //try

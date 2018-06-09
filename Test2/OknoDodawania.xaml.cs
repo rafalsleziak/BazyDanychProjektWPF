@@ -25,6 +25,12 @@ namespace Test2
         float kosztMb;
         bool ornament;
         Connection baza = MainWindow.Baza;
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
         DataSet dataset;
 
         public OknoDodawania()
@@ -54,9 +60,6 @@ namespace Test2
 
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
     }
 }

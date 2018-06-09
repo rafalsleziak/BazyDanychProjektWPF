@@ -13,7 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data;
-
+/// <summary>
+/// ///////////////////////////////TO TEEEEEEEEEENNNNNNNNNNNNN NAJNOWSZY !!!!!!!!!!!//////////////////////
+/// </summary>
 
 namespace Test2
 {
@@ -106,7 +108,8 @@ namespace Test2
 
         private void ButtonEdytujListwe_Click(object sender, RoutedEventArgs e)
         {
-
+            OknoEdycjiListwy oknoEdycjiListwy = new OknoEdycjiListwy();
+            oknoEdycjiListwy.Show();
         }
 
 
@@ -114,6 +117,11 @@ namespace Test2
         {
             OknoZamowienia oknoZamowienia = new OknoZamowienia();
             oknoZamowienia.Show();
+        }
+
+        private void ButtonEdytujListwe_Click_1(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
