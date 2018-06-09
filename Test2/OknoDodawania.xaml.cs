@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +20,38 @@ namespace Test2
     /// </summary>
     public partial class OknoDodawania : Window
     {
+
+        string symbol, material, kolor, okleina;
+        float kosztMb;
+        bool ornament;
+        Connection baza = MainWindow.Baza;
+        DataSet dataset;
+
         public OknoDodawania()
         {
             InitializeComponent();
+
+        }
+
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            kolor = textBoxListwaKolor.Text;
+            symbol = textBoxListwaSymbol.Text;
+            material = textBoxListwaMaterial.Text;
+            okleina = textBoxListwaOkleina.Text;
+            kosztMb = float.Parse(textBoxListwaKosztMB.Text, System.Globalization.CultureInfo.InvariantCulture.NumberFormat);
+            ornament = (checkBoxOrnament.IsChecked == true);
+            baza.InsertListwa(symbol, material, kolor, ornament, okleina, kosztMb);
+            dataset = baza.LoadData("SELECT * FROM listwa");
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window.GetType() == typeof(MainWindow))
+                {
+                    (window as MainWindow).dataGridListwa.ItemsSource = dataset.Tables[0].DefaultView;
+                }
+            }
+
         }
     }
 }

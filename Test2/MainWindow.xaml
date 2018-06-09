@@ -30,7 +30,7 @@
                     <Button x:Name="ButtonDodajListwe" Content="Dodaj Listwę" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="38,89,0,0" Height="34" Click="ButtonDodajListwe_Click"/>
                     <Button x:Name="ButtonUsunListwe" Content="Usuń" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="210,89,0,0" Height="34" RenderTransformOrigin="0.073,0.492"/>
                     <Button x:Name="ButtonEdytujListwe" Content="Edytuj" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="392,89,0,0" Height="34"/>
-                    <DataGrid x:Name="TabelaListwa" HorizontalAlignment="Center"  VerticalAlignment="Top" Height="400" Width="850" SelectionChanged="TabelaListwa_SelectionChanged" Margin="38,155,53,0"/>
+                    <DataGrid x:Name="dataGridListwa" HorizontalAlignment="Center"  VerticalAlignment="Top" Height="400" Width="850" SelectionChanged="TabelaListwa_SelectionChanged" Margin="38,155,53,0" ColumnWidth="*" x:FieldModifier="public"/>
 
                     
 
