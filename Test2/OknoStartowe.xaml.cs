@@ -15,18 +15,25 @@ using System.Windows.Shapes;
 namespace Test2
 {
     /// <summary>
-    /// Interaction logic for OknoZamowienia.xaml
+    /// Interaction logic for OknoStartowe.xaml
     /// </summary>
-    public partial class OknoZamowienia : Window
+    public partial class OknoStartowe : Window
     {
-        public OknoZamowienia()
+        public OknoStartowe()
         {
             InitializeComponent();
         }
 
-        private void comboBoxListwy_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void buttonZlozZamowienie_Click(object sender, RoutedEventArgs e)
         {
+            OknoZamowienia oknoZamowienia = new OknoZamowienia();
+            oknoZamowienia.Show();
+        }
 
+        private void buttonPrzegladajBaze_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow oknoMain = new MainWindow();
+            oknoMain.Show();
         }
     }
 }

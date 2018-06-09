@@ -23,7 +23,7 @@ namespace Test2
         public MainWindow()
         {
             InitializeComponent();
-            TabelaListwa.IsReadOnly = true;
+            //TabelaListwa.IsReadOnly = true;
             //TabelaListwa.DataSource = dataset.Tables[0].DefaultView;
             //TabelaListwa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             //TabelaListwa.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;

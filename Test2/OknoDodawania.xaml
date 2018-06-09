@@ -32,8 +32,8 @@
             <TextBox x:Name="textBoxListwaSymbol" HorizontalAlignment="Left" Height="23" Margin="179,26,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
             <TextBox x:Name="textBoxListwaMaterial" HorizontalAlignment="Left" Height="23" Margin="179,68,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
             <TextBox x:Name="textBoxListwaKolor" HorizontalAlignment="Left" Height="23" Margin="179,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="textBoxListwaOkleina" HorizontalAlignment="Left" Height="23" Margin="179,156,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="textBoxListwaKosztMB" HorizontalAlignment="Left" Height="23" Margin="179,197,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="textBoxListwaOkleina" HorizontalAlignment="Left" Height="23" Margin="179,197,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="textBoxListwaKosztMB" HorizontalAlignment="Left" Height="23" Margin="179,156,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
 
             <TextBlock x:Name="textBlockListwaSymbol" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Symbol" VerticalAlignment="Top" Margin="52,26,0,0"/>
             <TextBlock x:Name="textBlockListwaMaterial" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Material" VerticalAlignment="Top" Margin="52,68,0,0"/>

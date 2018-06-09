@@ -1,0 +1,37 @@
+﻿<Window x:Class="Test2.OknoStartowe"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Test2"
+        mc:Ignorable="d"
+        Title="System Magazynowania" Height="345.267" Width="464" Background="#009999">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="FontFamily" Value="Calibri" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="FontFamily" Value="Calibri" />
+            <Setter Property="Background" Value="White"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="FontFamily" Value="Calibri" />
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+
+    </Window.Resources>
+
+    <Border Background="#3a3635" Margin="11" CornerRadius="10">
+        <Grid Margin="0,0,0.2,0.2">
+            <Label x:Name="labelSystemMagazynowania" Content="System Magazynowania Listew" HorizontalAlignment="Center" VerticalAlignment="Top"  Width="202" Margin="113,5,113.6,0"/>
+
+            <Button x:Name="buttonZlozZamowienie" Content="Wprowadź Zamówienie" HorizontalAlignment="Center" VerticalAlignment="Top" Width="136"  Click="buttonZlozZamowienie_Click" Margin="148,86,147.8,0" Height="37"/>
+            <Button x:Name="buttonPrzegladajBaze" Content="Przeglądaj Bazę" HorizontalAlignment="Center" VerticalAlignment="Top" Width="136" Margin="148,169,147.8,0" Height="35" Click="buttonPrzegladajBaze_Click"/>
+
+        </Grid>
+    </Border>
+</Window>

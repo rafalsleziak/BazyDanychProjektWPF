@@ -13,5 +13,6 @@ namespace Test2
     /// </summary>
     public partial class App : Application
     {
+        OknoDodawania okno = new OknoDodawania();
     }
 }
