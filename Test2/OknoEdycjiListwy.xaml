@@ -1,12 +1,11 @@
-﻿<Window x:Class="Test2.OknoDodawania"
+﻿<Window x:Class="Test2.OknoEdycjiListwy"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Test2"
         mc:Ignorable="d"
-        Title="Dodaj Listwe" Height="405" Width="377.6" Background="#009999">
-
+        Title="OknoEdycjiListwy" Height="408.8" Width="397.6" Background="#009999">
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="Foreground" Value="White" />

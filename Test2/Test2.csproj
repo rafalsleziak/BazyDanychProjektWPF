@@ -74,6 +74,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="OknoEdycjiListwy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="OknoStartowe.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -86,6 +90,9 @@
   <ItemGroup>
     <Compile Include="OknoDodawania.xaml.cs">
       <DependentUpon>OknoDodawania.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OknoEdycjiListwy.xaml.cs">
+      <DependentUpon>OknoEdycjiListwy.xaml</DependentUpon>
     </Compile>
     <Compile Include="OknoStartowe.xaml.cs">
       <DependentUpon>OknoStartowe.xaml</DependentUpon>
