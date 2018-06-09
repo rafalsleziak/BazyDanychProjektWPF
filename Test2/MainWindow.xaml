@@ -1,0 +1,68 @@
+﻿<Window x:Class="Test2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Test2"
+        mc:Ignorable="d"
+        Title="Magazyn" Height="640" Width="960" Background="#009999">
+
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="FontFamily" Value="Calibri" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="FontFamily" Value="Calibri" />
+            <Setter Property="Background" Value="White"/>
+
+        </Style>
+    </Window.Resources>
+    <Border Background="#3a3635" Margin="13" CornerRadius="10">
+
+        <TabControl Background="#3a3635"  x:Name="Listwa" HorizontalAlignment="Left" Height="543" VerticalAlignment="Top" Width="895" Margin="10,2,0,0" Padding="0,0,0,0" 
+>
+            <TabItem Header="Listwa" Margin="-2,-2,1.8,0" Foreground="#3a3635" >
+                <Grid Background="#3a3635" Margin="-15,-28,-20.2,-34.6" >
+
+                    <Button x:Name="ButtonDodajListwe" Content="Dodaj Listwę" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="38,89,0,0" Height="34" Click="ButtonDodajListwe_Click"/>
+                    <Button x:Name="ButtonUsunListwe" Content="Usuń" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="210,89,0,0" Height="34" RenderTransformOrigin="0.073,0.492"/>
+                    <Button x:Name="ButtonEdytujListwe" Content="Edytuj" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="392,89,0,0" Height="34"/>
+
+                    <DataGrid x:Name="TabelaListwa" HorizontalAlignment="Center" Margin="38,146,40,0" VerticalAlignment="Top" Height="400" Width="850" SelectionChanged="TabelaListwa_SelectionChanged"/>
+                </Grid>
+
+
+
+            </TabItem>
+
+
+
+            <TabItem Header="Paczka" Margin="2.2,-2,0,0" HorizontalAlignment="Left" Width="86" Foreground="#3a3635">
+                <Grid Background="#3a3635" Margin="-15,-28,-20.2,-34.6" >
+
+
+                    <DataGrid x:Name="TabelaPaczka" HorizontalAlignment="Center" Margin="38,207,48,0" VerticalAlignment="Top" Height="261" Width="842" />
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Zamowienia" Margin="2.8,-2,-10.2,0.2" HorizontalAlignment="Left" Width="81" Foreground="#3a3635">
+                <Grid Background="#3a3635" Margin="-15,-28,-20.2,-34.6" >
+
+
+                    <DataGrid x:Name="TabelaZamowienia" HorizontalAlignment="Center" Margin="38,207,48,0" VerticalAlignment="Top" Height="261" Width="842" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+
+
+
+
+
+
+    </Border>
+
+</Window> 
