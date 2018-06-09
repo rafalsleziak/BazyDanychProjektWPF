@@ -39,5 +39,11 @@ namespace Test2
             OknoDodawania okno = new OknoDodawania();
             okno.Show();
         }
+
+        private void buttonZlozZamowienie_Click(object sender, RoutedEventArgs e)
+        {
+            OknoZamowienia oknoZamowienia = new OknoZamowienia();
+            oknoZamowienia.Show();
+        }
     }
 }

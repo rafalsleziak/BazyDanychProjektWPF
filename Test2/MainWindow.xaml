@@ -25,13 +25,15 @@
         <TabControl Background="#3a3635"  x:Name="Listwa" HorizontalAlignment="Left" Height="543" VerticalAlignment="Top" Width="895" Margin="10,2,0,0" Padding="0,0,0,0" 
 >
             <TabItem Header="Listwa" Margin="-2,-2,1.8,0" Foreground="#3a3635" >
-                <Grid Background="#3a3635" Margin="-15,-28,-20.2,-34.6" >
+                <Grid Background="#3a3635" Margin="0,-23,-35.2,-39.6" >
 
                     <Button x:Name="ButtonDodajListwe" Content="Dodaj Listwę" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="38,89,0,0" Height="34" Click="ButtonDodajListwe_Click"/>
                     <Button x:Name="ButtonUsunListwe" Content="Usuń" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="210,89,0,0" Height="34" RenderTransformOrigin="0.073,0.492"/>
                     <Button x:Name="ButtonEdytujListwe" Content="Edytuj" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="392,89,0,0" Height="34"/>
-
                     <DataGrid x:Name="TabelaListwa" HorizontalAlignment="Center" Margin="38,146,40,0" VerticalAlignment="Top" Height="400" Width="850" SelectionChanged="TabelaListwa_SelectionChanged"/>
+
+                    
+
                 </Grid>
 
 
@@ -53,6 +55,7 @@
 
 
                     <DataGrid x:Name="TabelaZamowienia" HorizontalAlignment="Center" Margin="38,207,48,0" VerticalAlignment="Top" Height="261" Width="842" />
+                    <Button x:Name="buttonZlozZamowienie" Content="Zlóż Zamowienie" HorizontalAlignment="Left" Margin="395,120,0,0" VerticalAlignment="Top" Width="118" Click="buttonZlozZamowienie_Click"/>
                 </Grid>
             </TabItem>
         </TabControl>
