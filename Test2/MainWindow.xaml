@@ -55,7 +55,7 @@
 
 
                     <DataGrid x:Name="TabelaZamowienia" HorizontalAlignment="Center" Margin="38,207,48,0" VerticalAlignment="Top" Height="261" Width="842" />
-                    <Button x:Name="buttonZlozZamowienie" Content="Zlóż Zamowienie" HorizontalAlignment="Left" Margin="395,120,0,0" VerticalAlignment="Top" Width="118" Click="buttonZlozZamowienie_Click"/>
+                    <Button x:Name="buttonZlozZamowienie" Content="Zlóż Zamowienie" HorizontalAlignment="Left" Margin="38,154,0,0" VerticalAlignment="Top" Width="118" Click="buttonZlozZamowienie_Click"/>
                 </Grid>
             </TabItem>
         </TabControl>

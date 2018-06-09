@@ -15,18 +15,13 @@ using System.Windows.Shapes;
 namespace Test2
 {
     /// <summary>
-    /// Interaction logic for OknoDodawania.xaml
+    /// Interaction logic for OknoEdycjiListwy.xaml
     /// </summary>
-    public partial class OknoDodawania : Window
+    public partial class OknoEdycjiListwy : Window
     {
-        public OknoDodawania()
+        public OknoEdycjiListwy()
         {
             InitializeComponent();
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

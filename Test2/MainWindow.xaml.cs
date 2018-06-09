@@ -20,9 +20,11 @@ namespace Test2
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
+            
             //TabelaListwa.IsReadOnly = true;
             //TabelaListwa.DataSource = dataset.Tables[0].DefaultView;
             //TabelaListwa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
