@@ -108,6 +108,7 @@
     <Compile Include="OknoZamowienia.xaml.cs">
       <DependentUpon>OknoZamowienia.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Produkt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

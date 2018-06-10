@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -23,13 +24,16 @@ namespace Test2
         Connection baza = new Connection();
         public DataSet dataSetListwaSymbol;
         //string listwaSymbol;
-        float iloscMB;
-        List<Listwa> listaListw;
+        int iloscMB;
+        BindingList<Produkt> zamawianyProduktLista;
+
 
         public OknoZamowienia()
         {
+            zamawianyProduktLista = new BindingList<Produkt>();
             InitializeComponent();
             FillComboBoxListwy();
+            listBoxProdukty.Items.Add("Symbol" + "      " + "Zamawiana Ilość [Mb]");
            
         }
 
@@ -59,7 +63,7 @@ namespace Test2
 
             try
             {
-                iloscMB = float.Parse(textBoxIloscMB.Text, System.Globalization.CultureInfo.InvariantCulture.NumberFormat);
+                iloscMB = int.Parse(textBoxIloscMB.Text, System.Globalization.CultureInfo.InvariantCulture.NumberFormat);
                 listwa.symbol = comboBoxListwy.Text;
             }
             catch
@@ -67,12 +71,15 @@ namespace Test2
                 MessageBox.Show("Wystapil Blad, Wypelnij wszytskie rubryki!");
             }
 
-            string b = baza.FindListwaQuerryBy("symbol", listwa.symbol, "idListwa"); //Funckja do zapytania SQL: (SELECT * from listwa Where columnName=Value) zwraca stringa=returnWhat 
+            string b = baza.FindListwaQuerryBy("symbol", listwa.symbol, "idListwa"); //Funckja do zapytania SQL: (SELECT * from listwa Where columnName=Value) zwraca stringa=returnWhat, w tym przypadku znajdujemy idListwy
             MessageBox.Show(b);
+            listwa.id = int.Parse(b);
+
+            Produkt produkt = new Produkt(listwa.id, listwa.symbol, iloscMB);
+
+            zamawianyProduktLista.Add(produkt);
+            listBoxProdukty.Items.Add(produkt.FormatujDoStringaListy());
            
-
-
-
         }
     }
 }

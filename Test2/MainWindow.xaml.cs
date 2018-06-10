@@ -124,7 +124,11 @@ namespace Test2
             oknoZamowienia.Show();
         }
 
-
+        private void buttonSzczegolyZamowienia_Click(object sender, RoutedEventArgs e)
+        {
+            OknoSzczegolyZamowienia oknoSzczegolyZamowienia = new OknoSzczegolyZamowienia();
+            oknoSzczegolyZamowienia.Show();
+        }
     }
 }
 
