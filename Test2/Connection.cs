@@ -10,7 +10,7 @@ namespace Test2
 {
     class Connection
     {
-        public static string MyConnectionString = "Server=localhost;Database=baza;port=3306;Uid=root;Pwd=password;SslMode=none";
+        public static string MyConnectionString = "Server=localhost;Database=magazyn;port=3306;Uid=root;Pwd=bazydanych;SslMode=none";
 
         public DataSet LoadData(string query)
         {
@@ -29,9 +29,16 @@ namespace Test2
             {
                 throw;
             }
-
             
         }
+
+        public string LoadDataToString()
+        {
+           
+            return "nic";
+        }
+
+         
 
         public void InsertListwa(string symbol, string material, string kolor, bool ornament, string okleina, float kosztMb)
         {
@@ -91,8 +98,6 @@ namespace Test2
             }
         }
 
-
-
         public void UpdateListwa(string symbol, string material, string kolor, bool ornament, string okleina, float kosztMb, string idListwa)
         {
             MySqlConnection connection = new MySqlConnection(MyConnectionString);
@@ -125,41 +130,6 @@ namespace Test2
 
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //try
-        //   {
-
-        //       if (listOfParts.Any())
-        //       {
-        //           listOfParts.RemoveAt(listBox.SelectedIndex);
-        //           listBox.Items.RemoveAt(listBox.SelectedIndex);
-        //       }
-        //       else
-        //       {
-        //           MessageBox.Show("Brak Tasków!");
-        //       }
-        //   }
-        //   catch
-        //   {
-        //       MessageBox.Show("Nie wybrano tasku do usunięcia");
-        //   }
-
-
-
 
 
     }

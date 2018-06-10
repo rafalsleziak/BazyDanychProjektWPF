@@ -31,33 +31,23 @@
                     <Button x:Name="ButtonUsunListwe" Content="Usuń" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="210,89,0,0" Height="34" RenderTransformOrigin="0.073,0.492" Click="ButtonUsunListwe_Click"/>
                     <Button x:Name="ButtonEdytujListwe" Content="Edytuj" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="392,89,0,0" Height="34" Click="ButtonEdytujListwe_Click"/>
                     <DataGrid x:Name="dataGridListwa" HorizontalAlignment="Center"  VerticalAlignment="Top" Height="400" Width="850" SelectionChanged="TabelaListwa_SelectionChanged" Margin="38,155,53,0" ColumnWidth="*" x:FieldModifier="public"/>
-
-                    
-
                 </Grid>
-
-
-
             </TabItem>
-
 
 
             <TabItem Header="Paczka" Margin="2.2,-2,0,0" HorizontalAlignment="Left" Width="86" Foreground="#3a3635">
                 <Grid Background="#3a3635" Margin="-15,-28,-20.2,-34.6" >
-
-
-                    <DataGrid x:Name="TabelaPaczka" HorizontalAlignment="Center" Margin="38,219,48,0" VerticalAlignment="Top" Height="261" Width="842" />
+                    <DataGrid x:Name="dataGridPaczka" HorizontalAlignment="Center" Margin="38,159,48.2,0" VerticalAlignment="Top" Height="387" Width="842" ColumnWidth="*"  />
                 </Grid>
             </TabItem>
 
             <TabItem Header="Zamowienia" Margin="2.8,-2,-10.2,0.2" HorizontalAlignment="Left" Width="81" Foreground="#3a3635">
                 <Grid Background="#3a3635" Margin="-15,-28,-20.2,-34.6" >
-
-
-                    <DataGrid x:Name="TabelaZamowienia" HorizontalAlignment="Center" Margin="38,207,48,0" VerticalAlignment="Top" Height="261" Width="842" />
-                    <Button x:Name="buttonZlozZamowienie" Content="Zlóż Zamowienie" HorizontalAlignment="Left" Margin="38,154,0,0" VerticalAlignment="Top" Width="118" Click="buttonZlozZamowienie_Click"/>
+                    <DataGrid x:Name="dataGridZamowienie" HorizontalAlignment="Center" Margin="38,165,48.2,0" VerticalAlignment="Top" Height="387" Width="842" ColumnWidth="*"/>
+                    <Button x:Name="buttonZlozZamowienie" Content="Zlóż Zamowienie" HorizontalAlignment="Left" Margin="38,108,0,0" VerticalAlignment="Top" Width="127" Click="buttonZlozZamowienie_Click" Height="29"/>
                 </Grid>
             </TabItem>
+
         </TabControl>
 
 

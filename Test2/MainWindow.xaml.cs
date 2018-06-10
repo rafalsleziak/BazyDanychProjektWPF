@@ -20,39 +20,53 @@ using System.Data;
 namespace Test2
 {
 
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
-
-        string idListwyDoUsuniecia;
         private static Connection baza = new Connection();
-        DataSet dataset;
 
-        internal static Connection Baza { get => baza; set => baza = value; }
+        //Listwa
+        string idListwyDoUsuniecia;
+        DataSet dataSetListwa;
+
+        //Paczka
+        DataSet dataSetPaczka;
+
+        //Zamowienia
+        DataSet dataSetZamowienie;
+
+
+        internal static Connection Baza
+        { //{ get => baza; set => baza = value; }
+            get { return baza; }
+            set { baza = value; }
+        }
 
         public MainWindow()
         {
-            //Closing += OknoDodawania.OnWindowClosing;
-
-
             InitializeComponent();
-            //dataGridListwa.IsReadOnly = true;
-            //TabelaListwa.DataSource = dataset.Tables[0].DefaultView;
-            //TabelaListwa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            //TabelaListwa.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
-            dataset = baza.LoadData("SELECT * FROM listwa");
+           
+            //Wczytaj dane do Tabeli Listwy
+            dataSetListwa = baza.LoadData("SELECT * FROM listwa");
             dataGridListwa.IsReadOnly = true;
-            dataGridListwa.ItemsSource = dataset.Tables[0].DefaultView;
-            //dataGridListwa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            //dataGridListwa.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            dataGridListwa.ItemsSource = dataSetListwa.Tables[0].DefaultView;
+
+            //Wczytaj dane do tabeli Paczek
+            dataSetPaczka = baza.LoadData("SELECT * FROM paczka");
+            dataGridPaczka.IsReadOnly = true;
+            dataGridPaczka.ItemsSource = dataSetPaczka.Tables[0].DefaultView;
+
+            //Wczytaj dane do tabeli Zamówien
+            dataSetZamowienie = baza.LoadData("SELECT * FROM zamowienie");
+            dataGridZamowienie.IsReadOnly = true;
+            dataGridZamowienie.ItemsSource = dataSetZamowienie.Tables[0].DefaultView;
         }
 
         private void TabelaListwa_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
+    
+        ///LISTWA
 
         private void ButtonDodajListwe_Click(object sender, RoutedEventArgs e)
         {
@@ -62,20 +76,6 @@ namespace Test2
 
 
         }
-
-        //private int GetColumnIndexByName(DataGrid grid, string name)
-        //{
-        //    for(int i = 0; i < grid.Columns.Count; i++)
-        //    {
-        //        if (grid.Columns[i].HeaderText.ToLower().Trim() == name.ToLower().Trim())
-        //        {
-        //            return grid.Columns.IndexOf(col);
-        //        }
-        //    }
-
-        //    return -1;
-        //}
-
 
         private void ButtonUsunListwe_Click(object sender, RoutedEventArgs e)
         {
@@ -94,8 +94,8 @@ namespace Test2
                     }
                 }
 
-                dataset = baza.LoadData("SELECT * FROM listwa");
-                dataGridListwa.ItemsSource = dataset.Tables[0].DefaultView;
+                dataSetListwa = baza.LoadData("SELECT * FROM listwa");
+                dataGridListwa.ItemsSource = dataSetListwa.Tables[0].DefaultView;
 
             }
             else
@@ -112,6 +112,11 @@ namespace Test2
             oknoEdycjiListwy.Show();
         }
 
+        ///Paczka
+        
+       
+
+       //Zamowienie
 
         private void buttonZlozZamowienie_Click(object sender, RoutedEventArgs e)
         {
@@ -119,10 +124,7 @@ namespace Test2
             oknoZamowienia.Show();
         }
 
-        private void ButtonEdytujListwe_Click_1(object sender, RoutedEventArgs e)
-        {
 
-        }
     }
 }
 
