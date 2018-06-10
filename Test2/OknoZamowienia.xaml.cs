@@ -66,12 +66,10 @@ namespace Test2
             {
                 MessageBox.Show("Wystapil Blad, Wypelnij wszytskie rubryki!");
             }
+
             string b = baza.FindListwaQuerryBy("symbol", listwa.symbol, "idListwa"); //Funckja do zapytania SQL: (SELECT * from listwa Where columnName=Value) zwraca stringa=returnWhat 
-            //string a= baza.FindListwaBySymbol(listwa.symbol);
             MessageBox.Show(b);
-            //DataSet dataListwa;
-            //dataListwa=baza.FindListwaBySymbol(listwa.symbol);
-            //dataListwa.Tables[0].Rows[0]
+           
 
 
 

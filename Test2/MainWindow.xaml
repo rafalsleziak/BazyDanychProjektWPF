@@ -35,7 +35,7 @@
             </TabItem>
 
 
-            <TabItem Header="Paczka" Margin="2.2,-2,0,0" HorizontalAlignment="Left" Width="86" Foreground="#3a3635">
+            <TabItem Header="Paczka" Margin="2,-2,-2,0" HorizontalAlignment="Left" Width="86" Foreground="#3a3635" Height="22" VerticalAlignment="Top">
                 <Grid Background="#3a3635" Margin="-15,-28,-20.2,-34.6" >
                     <DataGrid x:Name="dataGridPaczka" HorizontalAlignment="Center" Margin="38,159,48.2,0" VerticalAlignment="Top" Height="387" Width="842" ColumnWidth="*"  />
                 </Grid>
@@ -45,6 +45,7 @@
                 <Grid Background="#3a3635" Margin="-15,-28,-20.2,-34.6" >
                     <DataGrid x:Name="dataGridZamowienie" HorizontalAlignment="Center" Margin="38,165,48.2,0" VerticalAlignment="Top" Height="387" Width="842" ColumnWidth="*"/>
                     <Button x:Name="buttonZlozZamowienie" Content="Zlóż Zamowienie" HorizontalAlignment="Left" Margin="38,108,0,0" VerticalAlignment="Top" Width="127" Click="buttonZlozZamowienie_Click" Height="29"/>
+                    <Button x:Name="buttonSzczegolyZamowienia" Content="Szczegóły Zamówienia" HorizontalAlignment="Left" Margin="219,108,0,0" VerticalAlignment="Top" Width="128" Click="buttonZlozZamowienie_Click" Height="29"/>
                 </Grid>
             </TabItem>
 
