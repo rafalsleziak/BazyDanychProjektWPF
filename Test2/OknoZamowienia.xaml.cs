@@ -21,22 +21,28 @@ namespace Test2
     public partial class OknoZamowienia : Window
     {
         Connection baza = new Connection();
-        public DataSet listwaSymbol;
+        public DataSet dataSetListwaSymbol;
+        //string listwaSymbol;
+        float iloscMB;
+        List<Listwa> listaListw;
 
         public OknoZamowienia()
         {
             InitializeComponent();
             FillComboBoxListwy();
+           
         }
 
         void FillComboBoxListwy()
-        { 
-             
-            listwaSymbol=baza.LoadData("SELECT symbol FROM listwa");
+        {
 
-            foreach(DataRow r in listwaSymbol.Tables[0].Rows)
+            dataSetListwaSymbol=baza.LoadData("SELECT idListwa, symbol FROM listwa");
+
+            foreach(DataRow r in dataSetListwaSymbol.Tables[0].Rows)
             {
-                comboBoxListwy.Items.Add(r["symbol"].ToString());
+                comboBoxListwy.Items.Add(r["symbol"].ToString() );
+               // Listwa listwa = new Listwa(r["idLista"], r["symbol"].ToString() );
+                //listaListw.Add(new Listwa(r["symbol"].ToString() ));
             }
 
         }
@@ -44,6 +50,30 @@ namespace Test2
 
         private void comboBoxListwy_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+           // listwaSymbol = comboBoxListwy.GetValue();
+        }
+
+        public void buttonDodajProdukt_Click(object sender, RoutedEventArgs e)
+        {
+            Listwa listwa = new Listwa();
+
+            try
+            {
+                iloscMB = float.Parse(textBoxIloscMB.Text, System.Globalization.CultureInfo.InvariantCulture.NumberFormat);
+                listwa.symbol = comboBoxListwy.Text;
+            }
+            catch
+            {
+                MessageBox.Show("Wystapil Blad, Wypelnij wszytskie rubryki!");
+            }
+            string b = baza.FindListwaQuerryBy("symbol", listwa.symbol, "idListwa"); //Funckja do zapytania SQL: (SELECT * from listwa Where columnName=Value) zwraca stringa=returnWhat 
+            //string a= baza.FindListwaBySymbol(listwa.symbol);
+            MessageBox.Show(b);
+            //DataSet dataListwa;
+            //dataListwa=baza.FindListwaBySymbol(listwa.symbol);
+            //dataListwa.Tables[0].Rows[0]
+
+
 
         }
     }

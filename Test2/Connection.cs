@@ -131,7 +131,56 @@ namespace Test2
             }
         }
 
+        public string FindListwaBySymbol(string symbol)
+        {
+            DataSet listwa;
 
+            listwa = LoadData("SELECT *  from listwa WHERE symbol=\"" + symbol + "\"");
+            string a = listwa.Tables[0].Rows[0]["idListwa"].ToString();
+
+            return a;          
+        }
+
+        public string FindListwaQuerryBy(string columnName, string value, string returnWhat)
+        {
+            DataSet listwa;
+
+            listwa = LoadData("SELECT *  from listwa WHERE " + columnName + "=\"" + value + "\"");
+            string a = listwa.Tables[0].Rows[0][returnWhat].ToString();
+
+            return a;
+        }
+
+        ////////Produkt
+
+        public void InsertProdukt(int idZamowienie, int idListwa,int iloscListwy,int idPaczka)
+        {
+            MySqlConnection connection = new MySqlConnection(MyConnectionString);
+            MySqlCommand cmd;
+            connection.Open();
+            try
+            {
+                cmd = connection.CreateCommand();
+                cmd.CommandText = "INSERT INTO zamawianyprodukt(idZamowienie,idListwa,iloscListwy,idPaczka)VALUES(@idZamowienie,@idListwa,@iloscListwy,@idPaczka)";
+                cmd.Parameters.AddWithValue("@idZamowienie", idZamowienie);
+                cmd.Parameters.AddWithValue("@idListwa", idListwa);
+                cmd.Parameters.AddWithValue("@iloscListwy", iloscListwy);
+                cmd.Parameters.AddWithValue("@idPaczka", idPaczka);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close(); // bylo Clone(); ale to raczej blad
+                }
+
+            }
+        }
     }
 }
 
