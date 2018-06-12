@@ -10,7 +10,7 @@ namespace Test2
 {
     class Connection
     {
-        public static string MyConnectionString = "Server=localhost;Database=magazyn;port=3306;Uid=root;Pwd=bazydanych;SslMode=none";
+        public static string MyConnectionString = "Server=localhost;Database=baza;port=3306;Uid=root;Pwd=password;SslMode=none";
 
         public DataSet LoadData(string query)
         {
@@ -151,6 +151,24 @@ namespace Test2
             return a;
         }
 
+
+
+        //////// KLIENT //////////////////////////////////////////////////
+
+        public string FindKlientQuerryBy(string columnName, string valueName, string column2Name, string value2Name, string returnWhat)
+        {
+            DataSet klient;
+
+            klient = LoadData("SELECT *  from klient WHERE " + columnName + "=\"" + valueName + "\"" + "AND " + column2Name + "=\"" + value2Name + "\"");
+            string a = klient.Tables[0].Rows[0][returnWhat].ToString();
+
+            return a;
+        }
+
+
+
+
+
         ////////Produkt
 
         public void InsertProdukt(int idZamowienie, int idListwa,int iloscListwy,int idPaczka)
@@ -181,6 +199,87 @@ namespace Test2
 
             }
         }
+
+        public string FindProduktQuerryBy(string columnName, string value, string returnWhat)
+        {
+            DataSet zamawianyProdukt;
+
+            zamawianyProdukt = LoadData("SELECT *  from zamawianyprodukt WHERE " + columnName + "=\"" + value + "\"");
+            string a = zamawianyProdukt.Tables[0].Rows[0][returnWhat].ToString();
+
+            return a;
+        }
+
+        ///////////////////////// ZAMOWIENIE ////////////////////
+
+        public void InsertZamowienie(DateTime data_zlozenia, int idKlient, string stan, bool zaplacono)
+        {
+            MySqlConnection connection = new MySqlConnection(MyConnectionString);
+            MySqlCommand cmd;
+            connection.Open();
+            try
+            {
+                cmd = connection.CreateCommand();
+                cmd.CommandText = "INSERT INTO zamowienie(data_zlozenia, idKlient, stan, zaplacono)VALUES(@data_zlozenia,@idKlient,@stan,@zaplacono)";
+                cmd.Parameters.AddWithValue("@data_zlozenia", data_zlozenia);
+                cmd.Parameters.AddWithValue("@idKlient", idKlient);
+                cmd.Parameters.AddWithValue("@stan", stan);
+                cmd.Parameters.AddWithValue("@zaplacono", zaplacono);
+                //cmd.Parameters.AddWithValue("@ornament");
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close(); // bylo Clone(); ale to raczej blad
+                }
+
+            }
+        }
+
+
+        public string FindZamowienieByDate(DateTime dateTime, int idKlient, string returnWhat)
+        {
+            DataSet zamowienie;
+
+            zamowienie = LoadData("SELECT *  from zamowienie WHERE data_zlozenia"  + "=\"" + dateTime + "\"" + "AND " + "idKlient=\"" + idKlient + "\"");
+            string a = zamowienie.Tables[0].Rows[0][returnWhat].ToString();
+
+            return a;
+
+        }
+
+        public string FindZamowienieQuerryBy(string columnName, string valueName, string returnWhat)
+        {
+            DataSet zamowienie;
+
+            zamowienie = LoadData("SELECT *  from zamowienie WHERE " + columnName + "=\"" + valueName + "\"");
+            string a = zamowienie.Tables[0].Rows[0][returnWhat].ToString();
+
+            return a;
+        }
+
+
+
+        public string FindZamowienieQuerryBy(string columnName, string valueName, string column2Name, string value2Name, string returnWhat)
+        {
+            DataSet zamowienie;
+
+            zamowienie = LoadData("SELECT *  from zamowienie WHERE " + columnName + "=\"" + valueName + "\"" + "AND " + column2Name + "=\"" + value2Name + "\"");
+            string a = zamowienie.Tables[0].Rows[0][returnWhat].ToString();
+
+            return a;
+        }
+
+
+
+
+
     }
 }
 

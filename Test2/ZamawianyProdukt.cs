@@ -6,15 +6,18 @@ using System.Threading.Tasks;
 
 namespace Test2
 {
-    class Produkt
+    class ZamawianyProdukt
     {
+
+        public int idZamawianyProdukt;
         public int idListwa;
         public string symbol;
         public int iloscListwy;
 
-        public Produkt() { }
-       public  Produkt(int idListwa,string symbol, int iloscListwy)
+        public ZamawianyProdukt() { }
+        public ZamawianyProdukt(int idZamawianyProdukt, int idListwa, string symbol, int iloscListwy)
         {
+            this.idZamawianyProdukt = idZamawianyProdukt;
             this.idListwa = idListwa;
             this.symbol = symbol;
             this.iloscListwy = iloscListwy;
@@ -24,9 +27,8 @@ namespace Test2
         {
             string wynik = symbol + "   " + iloscListwy;
 
-            return  wynik;
+            return wynik;
         }
-
 
 
     }

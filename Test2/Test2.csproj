@@ -57,6 +57,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ZamawianyProdukt.cs" />
+    <Compile Include="Zamowienie.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -66,6 +68,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Connection.cs" />
+    <Compile Include="Klient.cs" />
     <Compile Include="Listwa.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

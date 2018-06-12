@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Test2"
         mc:Ignorable="d"
-        Title="Szczegoly Zamowienia" Height="458.364" Width="530.855" Background="#009999">
+        Title="Szczegoly Zamowienia" Height="575.364" Width="642.855" Background="#009999">
 
     <Window.Resources>
         <Style TargetType="Label">
@@ -22,10 +22,37 @@
 
 
     <Border Background="#3a3635" Margin="13" CornerRadius="10">
-        <Grid HorizontalAlignment="Left" Width="1024" Margin="0,-10,-180.8,10.6">
-            <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="244,97,0,0" VerticalAlignment="Top" Height="278" Width="220"/>
-            <Label x:Name="labeListaZamawianychProduktow" Content="Lista Zamawianych Produktow" HorizontalAlignment="Left" Margin="257,48,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="labelDaneKlienta" Content="Dane Klienta" HorizontalAlignment="Left" Margin="20,97,0,0" VerticalAlignment="Top" Width="82"/>
+        <Grid HorizontalAlignment="Left" Width="1024" Margin="0,-10,-180.8,10.6" RenderTransformOrigin="0.521,0.498">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="95*"/>
+                <ColumnDefinition Width="161*"/>
+            </Grid.ColumnDefinitions>
+            <DataGrid x:Name="dataGridZamawianyProdukt" HorizontalAlignment="Left" Margin="40,282,0,0" VerticalAlignment="Top" Height="226" Width="536" Grid.ColumnSpan="2" ColumnWidth="*"/>
+            <Label x:Name="labeListaZamawianychProduktow" Content="Lista Zamawianych Produktow" HorizontalAlignment="Left" Margin="219,238,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="26" Width="183"/>
+            <Label x:Name="labelDaneKlienta" Content="Dane Klienta" HorizontalAlignment="Left" Margin="102,22,0,0" VerticalAlignment="Top" Width="82" Height="26"/>
+            <Label x:Name="labelDaneZamowienia" Content="Dane Zamowienia" HorizontalAlignment="Left" Margin="0,22,0,0" VerticalAlignment="Top" Width="122" Grid.Column="1" Height="26"/>
+            <Label x:Name="labelDaneKlientaIdKlient" Content="IdKlient: " HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" Width="82" RenderTransformOrigin="0.524,-0.154" Height="26"/>
+            <Label x:Name="labelDaneKlientaImie" Content="Imie: " HorizontalAlignment="Left" Margin="10,83,0,0" VerticalAlignment="Top" Width="82" Height="26"/>
+            <Label x:Name="labelDaneKlientaNazwisko" Content="Nazwisko: " HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" Width="82" RenderTransformOrigin="0.415,-0.731" Height="26"/>
+            <Label x:Name="labelDaneKlientaTelefon" Content="Telefon: " HorizontalAlignment="Left" Margin="10,135,0,0" VerticalAlignment="Top" Width="82" RenderTransformOrigin="0.439,-1.192" Height="26"/>
+            <Label x:Name="labelDaneKlientaEmail" Content="Email: " HorizontalAlignment="Left" Margin="10,161,0,0" VerticalAlignment="Top" Width="82" Height="26"/>
+            <Label x:Name="labelDaneKlientaFirma" Content="Firma: " HorizontalAlignment="Left" Margin="10,187,0,0" VerticalAlignment="Top" Width="82" Height="26"/>
+            <Label x:Name="labelDaneKlientaMarza" Content="Marza: " HorizontalAlignment="Left" Margin="10,213,0,0" VerticalAlignment="Top" Width="82" Height="26"/>
+            <Label x:Name="labelDaneZamowieniaDataZlozenia" Content="Data zlozenia: " HorizontalAlignment="Left" Margin="252,57,0,0" VerticalAlignment="Top" Width="122" Height="26"/>
+            <Label x:Name="labelDaneZamowieniaIdKlient" Content="IdKlient: " HorizontalAlignment="Left" Margin="252,83,0,0" VerticalAlignment="Top" Width="122" Height="26"/>
+            <Label x:Name="labelDaneZamowieniaStan" Content="Stan: " HorizontalAlignment="Left" Margin="252,109,0,0" VerticalAlignment="Top" Width="122" Height="26"/>
+            <Label x:Name="labelDaneZamowieniaZaplacono" Content="Zaplacono: " HorizontalAlignment="Left" Margin="252,135,0,0" VerticalAlignment="Top" Width="122" Height="26"/>
+            <Label x:Name="labelDaneZamowieniaDataZlozenia2" Content="--" HorizontalAlignment="Left" Margin="0,57,0,0" VerticalAlignment="Top" Width="193" Grid.Column="1" Height="26"/>
+            <Label x:Name="labelDaneZamowieniaIdKlient2" Content="--" HorizontalAlignment="Left" Margin="0,83,0,0" VerticalAlignment="Top" Width="193" Grid.Column="1" Height="26"/>
+            <Label x:Name="labelDaneZamowieniaStan2" Content="--" HorizontalAlignment="Left" Margin="0,109,0,0" VerticalAlignment="Top" Width="193" Grid.Column="1" Height="26"/>
+            <Label x:Name="labelDaneZamowieniaZaplacono2" Content="--" HorizontalAlignment="Left" Margin="0,135,0,0" VerticalAlignment="Top" Width="193" Grid.Column="1" Height="26"/>
+            <Label x:Name="labelDaneKlientaIdKlient2" Content="--" HorizontalAlignment="Left" Margin="92,57,0,0" VerticalAlignment="Top" Width="82" RenderTransformOrigin="0.524,-0.154" Height="26"/>
+            <Label x:Name="labelDaneKlientaImie2" Content="--" HorizontalAlignment="Left" Margin="92,83,0,0" VerticalAlignment="Top" Width="82" Height="26"/>
+            <Label x:Name="labelDaneKlientaNazwisko2" Content="--" HorizontalAlignment="Left" Margin="92,109,0,0" VerticalAlignment="Top" Width="82" RenderTransformOrigin="0.415,-0.731" Height="26"/>
+            <Label x:Name="labelDaneKlientaTelefon2" Content="--" HorizontalAlignment="Left" Margin="92,135,0,0" VerticalAlignment="Top" Width="82" RenderTransformOrigin="0.439,-1.192" Height="26"/>
+            <Label x:Name="labelDaneKlientaEmail2" Content="--" HorizontalAlignment="Left" Margin="92,161,0,0" VerticalAlignment="Top" Width="82" Height="26"/>
+            <Label x:Name="labelDaneKlientaFirma2" Content="--" HorizontalAlignment="Left" Margin="92,187,0,0" VerticalAlignment="Top" Width="82" Height="26"/>
+            <Label x:Name="labelDaneKlientaMarza2" Content="--" HorizontalAlignment="Left" Margin="92,213,0,0" VerticalAlignment="Top" Width="82" Height="26"/>
         </Grid>
     </Border>
 </Window>
