@@ -152,7 +152,7 @@ namespace Test2
                     baza.InsertProdukt(zamowienie.idZamowienie,produkt.idListwa, produkt.iloscListwy,0);
                 }
 
-
+                //asdsa
             }
         }
     }
