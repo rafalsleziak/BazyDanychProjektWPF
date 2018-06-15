@@ -24,7 +24,7 @@
 
         <TabControl Background="#3a3635"  x:Name="Listwa" HorizontalAlignment="Left" Height="543" VerticalAlignment="Top" Width="895" Margin="10,2,0,0" Padding="0,0,0,0" 
 >
-            <TabItem Header="Listwa" Margin="-2,-2,1.8,0" Foreground="#3a3635" >
+            <TabItem Header="Listwa" Margin="-2,-5,2,4"  VerticalAlignment="Bottom" Foreground="#3a3635" Height="21" >
                 <Grid Background="#3a3635" Margin="-13,-23,-35.2,-39.6" >
 
                     <Button x:Name="ButtonDodajListwe" Content="Dodaj Listwę" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="38,89,0,0" Height="34" Click="ButtonDodajListwe_Click"/>
@@ -35,19 +35,32 @@
             </TabItem>
 
 
-            <TabItem Header="Paczka" Margin="2,-2,-2,0" HorizontalAlignment="Left" Width="86" Foreground="#3a3635" Height="22" VerticalAlignment="Top">
+            <TabItem Header="Paczka" Margin="0,-2,0,4" HorizontalAlignment="Left" Foreground="#3a3635" Height="19" VerticalAlignment="Bottom">
                 <Grid Background="#3a3635" Margin="-15,-28,-20.2,-34.6" >
                     <DataGrid x:Name="dataGridPaczka" HorizontalAlignment="Center" Margin="38,159,48.2,0" VerticalAlignment="Top" Height="387" Width="842" ColumnWidth="*"  />
                 </Grid>
             </TabItem>
 
-            <TabItem Header="Zamowienia" Margin="2.8,-2,-10.2,0.2" HorizontalAlignment="Left" Width="81" Foreground="#3a3635">
+            <TabItem Header="Zamowienia" Margin="2,-3,-2,4" HorizontalAlignment="Left"  VerticalAlignment="Bottom" Foreground="#3a3635">
                 <Grid Background="#3a3635" Margin="-15,-28,-20.2,-34.6" >
                     <DataGrid x:Name="dataGridZamowienie" HorizontalAlignment="Center" Margin="38,165,48.2,0" VerticalAlignment="Top" Height="387" Width="842" ColumnWidth="*"/>
                     <Button x:Name="buttonZlozZamowienie" Content="Zlóż Zamowienie" HorizontalAlignment="Left" Margin="38,108,0,0" VerticalAlignment="Top" Width="127" Click="buttonZlozZamowienie_Click" Height="29"/>
                     <Button x:Name="buttonSzczegolyZamowienia" Content="Szczegóły Zamówienia" HorizontalAlignment="Left" Margin="219,108,0,0" VerticalAlignment="Top" Width="128"  Height="29" Click="buttonSzczegolyZamowienia_Click"/>
                 </Grid>
             </TabItem>
+
+            <TabItem Header="Zapytanie Raportowe" Margin="4,-3,-4,4" HorizontalAlignment="Left"  VerticalAlignment="Bottom" Foreground="#3a3635">
+                <Grid Background="#3a3635" Margin="-15,-24,-20,-39" >
+                    <DataGrid x:Name="dataGridRaporty" HorizontalAlignment="Center" Margin="38,165,48.2,0" VerticalAlignment="Top" Height="387" Width="842" ColumnWidth="*"/>
+                    <Button x:Name="buttonWykonaj" Content="Wykonaj" HorizontalAlignment="Left" Margin="38,108,0,0" VerticalAlignment="Top" Width="127"  Height="30"/>
+                    <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="38,64,0,0" VerticalAlignment="Top" Width="120"/>
+                    <ComboBox x:Name="comboBox_Copy" HorizontalAlignment="Left" Margin="198,64,0,0" VerticalAlignment="Top" Width="120"/>
+                    <ComboBox x:Name="comboBox_Copy1" HorizontalAlignment="Left" Margin="362,64,0,0" VerticalAlignment="Top" Width="120"/>
+                    <ComboBox x:Name="comboBox_Copy2" HorizontalAlignment="Left" Margin="530,64,0,0" VerticalAlignment="Top" Width="120"/>
+                    <ComboBox x:Name="comboBox_Copy3" HorizontalAlignment="Left" Margin="702,64,0,0" VerticalAlignment="Top" Width="120"/>
+                </Grid>
+            </TabItem>
+
 
         </TabControl>
 

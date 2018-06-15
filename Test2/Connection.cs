@@ -10,7 +10,7 @@ namespace Test2
 {
     class Connection
     {
-        public static string MyConnectionString = "Server=localhost;Database=baza;port=3306;Uid=root;Pwd=password;SslMode=none";
+        public static string MyConnectionString = "Server=localhost;Database=magazyn2;port=3306;Uid=root;Pwd=bazydanych;SslMode=none"; //"Server=localhost;Database=baza;port=3306;Uid=root;Pwd=password;SslMode=none";
 
         public DataSet LoadData(string query)
         {
@@ -247,7 +247,7 @@ namespace Test2
         {
             DataSet zamowienie;
 
-            zamowienie = LoadData("SELECT *  from zamowienie WHERE data_zlozenia"  + "=\"" + dateTime + "\"" + "AND " + "idKlient=\"" + idKlient + "\"");
+            zamowienie = LoadData("SELECT *  from zamowienie WHERE data_zlozenia"  + "=\"" + dateTime.ToString() + "\"" + "AND " + "idKlient=\"" + idKlient + "\"");
             string a = zamowienie.Tables[0].Rows[0][returnWhat].ToString();
 
             return a;
