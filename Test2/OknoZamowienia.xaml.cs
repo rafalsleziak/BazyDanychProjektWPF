@@ -134,7 +134,7 @@ namespace Test2
             if (loadingFromDBComplete)
             {
                 string idKlienta = baza.FindKlientQuerryBy("imie", klient.imie, "nazwisko", klient.nazwisko, "idKlient"); //Funckja do zapytania SQL: (SELECT * from listwa Where columnName=Value) zwraca stringa=returnWhat, w tym przypadku znajdujemy idListwy
-             //   MessageBox.Show(idKlienta);
+                MessageBox.Show(idKlienta);
                 klient.id = int.Parse(idKlienta);
                 //DateTime dateTime = DateTime.Now;
                 //DateTime dateTime = DateTime.ParseExact(DateTime.Now.ToString(), "MM/dd/yyyy hh:mm:ss tt", System.Globalization.CultureInfo.InvariantCulture);
