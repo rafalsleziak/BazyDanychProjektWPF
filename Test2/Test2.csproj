@@ -57,6 +57,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="OknoLogowania.xaml.cs">
+      <DependentUpon>OknoLogowania.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ZamawianyProdukt.cs" />
     <Compile Include="Zamowienie.cs" />
     <Page Include="MainWindow.xaml">
@@ -79,6 +82,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="OknoEdycjiListwy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OknoLogowania.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -134,15 +134,15 @@ namespace Test2
             if (loadingFromDBComplete)
             {
                 string idKlienta = baza.FindKlientQuerryBy("imie", klient.imie, "nazwisko", klient.nazwisko, "idKlient"); //Funckja do zapytania SQL: (SELECT * from listwa Where columnName=Value) zwraca stringa=returnWhat, w tym przypadku znajdujemy idListwy
-                MessageBox.Show(idKlienta);
                 klient.id = int.Parse(idKlienta);
                 //DateTime dateTime = DateTime.Now;
-                //DateTime dateTime = DateTime.ParseExact(DateTime.Now.ToString(), "MM/dd/yyyy hh:mm:ss tt", System.Globalization.CultureInfo.InvariantCulture);
-                DateTime dateTime = DateTime.Now;
-               // var dateTimeString = dateTime.ToString(@"yyyy/MM/dd hh:mm:ss tt", new CultureInfo("en-US"));
+                string dateTime = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
+                //DateTime dateTime = DateTime.Now;
+                // var dateTimeString = dateTime.ToString(@"yyyy/MM/dd hh:mm:ss tt", new CultureInfo("en-US"));
                 //MessageBox.Show(dateTimeString);
 
                 baza.InsertZamowienie(dateTime, klient.id, "W produkcji", true);
+                //MessageBox.Show("SELECT *  from zamowienie WHERE data_zlozenia" + "=\"" + dateTime + "\"" + "AND " + "idKlient=\"" + klient.id + "\"");
                 string idZamowienie = baza.FindZamowienieByDate(dateTime, klient.id, "idZamowienie");
 
                 zamowienie.idZamowienie = int.Parse(idZamowienie);
