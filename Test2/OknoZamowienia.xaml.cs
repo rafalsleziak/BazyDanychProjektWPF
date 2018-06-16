@@ -140,17 +140,20 @@ namespace Test2
                 //DateTime dateTime = DateTime.ParseExact(DateTime.Now.ToString(), "MM/dd/yyyy hh:mm:ss tt", System.Globalization.CultureInfo.InvariantCulture);
                 DateTime dateTime = DateTime.Now;
                // var dateTimeString = dateTime.ToString(@"yyyy/MM/dd hh:mm:ss tt", new CultureInfo("en-US"));
-                //MessageBox.Show(dateTimeString);
+                
 
                 baza.InsertZamowienie(dateTime, klient.id, "W produkcji", true);
-                string idZamowienie = baza.FindZamowienieByDate(dateTime, klient.id, "idZamowienie");
+                MessageBox.Show(dateTime.ToString());
+                MessageBox.Show(klient.id.ToString());
 
-                zamowienie.idZamowienie = int.Parse(idZamowienie);
+                string idZamowienie = baza.FindZamowienieByDate(dateTime, klient.id, "stan");//("2018 - 06 - 15 20:13:54", 1, "idZamowienie");//
+
+               /* zamowienie.idZamowienie = int.Parse(idZamowienie);
 
                 foreach (Produkt produkt in zamawianyProduktLista)
                 {
                     baza.InsertProdukt(zamowienie.idZamowienie,produkt.idListwa, produkt.iloscListwy,0);
-                }
+                }*/
 
                 //asdsa
             }
