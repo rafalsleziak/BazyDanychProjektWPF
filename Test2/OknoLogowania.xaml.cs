@@ -36,7 +36,7 @@ namespace Test2
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            if( string.IsNullOrWhiteSpace(textBoxHaslo.Text) || string.IsNullOrWhiteSpace(textBoxLogin.Text) )
+            if( string.IsNullOrWhiteSpace(textBoxHaslo.Password) || string.IsNullOrWhiteSpace(textBoxLogin.Text) )
             {
                 
                 MessageBox.Show("Musisz podac Login i Haslo");
@@ -44,7 +44,13 @@ namespace Test2
 
             else
             {
-                SprawdzDaneLogowania(textBoxLogin.Text, textBoxHaslo.Text);
+                if( SprawdzDaneLogowania(textBoxLogin.Text, textBoxHaslo.Password) ==true )
+                {
+                    OknoStartowe oknoStartowe = new OknoStartowe();
+                    oknoStartowe.Show();
+                    Close();
+                }
+               // else
 
                 //PodmienHasloUzytkownika("Sleziak", "Sledziu123!", "Sleziak"); Przy pomocy tej funkcji mozemy podmienic haslo recznie
             }
