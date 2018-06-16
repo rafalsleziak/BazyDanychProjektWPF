@@ -51,13 +51,16 @@
 
             <TabItem Header="Zapytanie Raportowe" Margin="4,-3,-4,4" HorizontalAlignment="Left"  VerticalAlignment="Bottom" Foreground="#3a3635">
                 <Grid Background="#3a3635" Margin="-15,-24,-20,-39" >
-                    <DataGrid x:Name="dataGridRaporty" HorizontalAlignment="Center" Margin="38,165,48.2,0" VerticalAlignment="Top" Height="387" Width="842" ColumnWidth="*"/>
-                    <Button x:Name="buttonWykonaj" Content="Wykonaj" HorizontalAlignment="Left" Margin="38,108,0,0" VerticalAlignment="Top" Width="127"  Height="30"/>
-                    <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="38,64,0,0" VerticalAlignment="Top" Width="120"/>
-                    <ComboBox x:Name="comboBox_Copy" HorizontalAlignment="Left" Margin="198,64,0,0" VerticalAlignment="Top" Width="120"/>
-                    <ComboBox x:Name="comboBox_Copy1" HorizontalAlignment="Left" Margin="362,64,0,0" VerticalAlignment="Top" Width="120"/>
-                    <ComboBox x:Name="comboBox_Copy2" HorizontalAlignment="Left" Margin="530,64,0,0" VerticalAlignment="Top" Width="120"/>
-                    <ComboBox x:Name="comboBox_Copy3" HorizontalAlignment="Left" Margin="702,64,0,0" VerticalAlignment="Top" Width="120"/>
+                    <DataGrid x:Name="dataGridRaport" HorizontalAlignment="Center" Margin="38,165,48.2,0" VerticalAlignment="Top" Height="387" Width="842" ColumnWidth="*"/>
+                    <Button x:Name="buttonWykonaj" Content="Wykonaj" HorizontalAlignment="Left" Margin="753,119,0,0" VerticalAlignment="Top" Width="127"  Height="30" Click="buttonWykonaj_Click"/>
+                    <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Margin="118,60,0,0" VerticalAlignment="Top" Width="381"/>
+                    <Label Content="Generuj podsumowanie sprzedaży:" HorizontalAlignment="Left" Margin="38,29,0,0" VerticalAlignment="Top" Foreground="#FFCBC6C6" FontWeight="Bold"/>
+                    <Label Content="Kategoria:" HorizontalAlignment="Left" Margin="38,56,0,0" VerticalAlignment="Top" Foreground="#FFFDFDFD"/>
+                    <Label Content="Okres czasu:" HorizontalAlignment="Left" Margin="38,87,0,0" VerticalAlignment="Top" Foreground="#FFFDFDFD"/>
+                    <Label Content="Od" HorizontalAlignment="Left" Margin="118,87,0,0" VerticalAlignment="Top" Foreground="#FFFDFDFD"/>
+                    <Label Content="do" HorizontalAlignment="Left" Margin="314,87,0,0" VerticalAlignment="Top" Foreground="#FFFDFDFD"/>
+                    <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="147,89,0,0" VerticalAlignment="Top" Width="162"/>
+                    <DatePicker x:Name="datePicker2" HorizontalAlignment="Left" Margin="338,89,0,0" VerticalAlignment="Top" Width="161"/>
                 </Grid>
             </TabItem>
 

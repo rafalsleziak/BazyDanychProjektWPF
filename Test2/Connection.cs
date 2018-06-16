@@ -10,7 +10,7 @@ namespace Test2
 {
     class Connection
     {
-        public static string MyConnectionString = "Server=localhost;Database=magazyn2;port=3306;Uid=root;Pwd=bazydanych;SslMode=none"; //"Server=localhost;Database=baza;port=3306;Uid=root;Pwd=password;SslMode=none";
+        public static string MyConnectionString = "Server=localhost;Database=baza;port=3306;Uid=root;Pwd=password;SslMode=none"; //"Server=localhost;Database=baza;port=3306;Uid=root;Pwd=password;SslMode=none";
 
         public DataSet LoadData(string query)
         {
