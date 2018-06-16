@@ -50,9 +50,9 @@ namespace Test2
                     oknoStartowe.Show();
                     Close();
                 }
-               // else
+               
 
-                //PodmienHasloUzytkownika("Sleziak", "Sledziu123!", "Sleziak"); Przy pomocy tej funkcji mozemy podmienic haslo recznie
+                //PodmienHasloUzytkownika("admin", "admin!", "admin"); Przy pomocy tej funkcji mozemy podmienic haslo recznie
             }
 
         }
