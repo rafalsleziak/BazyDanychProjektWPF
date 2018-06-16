@@ -22,6 +22,8 @@ namespace Test2
         public OknoStartowe()
         {
             InitializeComponent();
+            OknoLogowania oknowLogowania = new OknoLogowania();
+            oknowLogowania.Show();
         }
 
         private void buttonZlozZamowienie_Click(object sender, RoutedEventArgs e)

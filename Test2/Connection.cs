@@ -212,7 +212,7 @@ namespace Test2
 
         ///////////////////////// ZAMOWIENIE ////////////////////
 
-        public void InsertZamowienie(DateTime data_zlozenia, int idKlient, string stan, bool zaplacono)
+        public void InsertZamowienie(string data_zlozenia, int idKlient, string stan, bool zaplacono)
         {
             MySqlConnection connection = new MySqlConnection(MyConnectionString);
             MySqlCommand cmd;
@@ -243,13 +243,15 @@ namespace Test2
         }
 
 
-        public string FindZamowienieByDate(DateTime dateTime, int idKlient, string returnWhat)
+        public string FindZamowienieByDate(string dateTime, int idKlient, string returnWhat)
         {
             DataSet zamowienie;
 
+            //Console.WriteLine("SELECT *  from zamowienie WHERE data_zlozenia" + "=\"" + dateTime.ToString() + "\"" + "AND " + "idKlient=\"" + idKlient + "\"");
+
             zamowienie = LoadData("SELECT *  from zamowienie WHERE data_zlozenia"  + "=\"" + dateTime.ToString() + "\"" + "AND " + "idKlient=\"" + idKlient + "\"");
             string a = zamowienie.Tables[0].Rows[0][returnWhat].ToString();
-
+            //SELECT* from zamowienie WHERE data_zlozenia = "15.06.2018 21:50:20" AND idKlient = "1"
             return a;
 
         }
