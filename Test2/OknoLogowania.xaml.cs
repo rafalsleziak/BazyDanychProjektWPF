@@ -23,7 +23,7 @@ namespace Test2
     public partial class OknoLogowania : Window
     {
         //Wlasciwosci  
-        public static string MyConnectionString = "Server=localhost;Database=magazyn2;port=3306;Uid=root;Pwd=bazydanych;SslMode=none";
+        public static string MyConnectionString = "Server=localhost;Database=baza;port=3306;Uid=root;Pwd=password;SslMode=none";
         MySqlConnection polaczenie = new MySqlConnection(MyConnectionString);
         MySqlCommand komenda;
         public string zapytanieSQL;
@@ -31,6 +31,7 @@ namespace Test2
         public OknoLogowania()
         {
             InitializeComponent();
+            PodmienHasloUzytkownika("admin", "admin", "admin");// Przy pomocy tej funkcji mozemy podmienic haslo recznie
            // Connection baza = new Connection();
         }
 
