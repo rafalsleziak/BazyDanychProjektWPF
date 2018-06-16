@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Test2"
         mc:Ignorable="d"
-        Title="Magazyn" Height="640" Width="960" Background="#009999">
+        Title="Magazyn" Height="640" Width="960" Background="#269ccc">
 
     <Window.Resources>
         <Style TargetType="TextBlock">
@@ -20,29 +20,29 @@
 
         </Style>
     </Window.Resources>
-    <Border Background="#3a3635" Margin="13" CornerRadius="10">
+    <Border Background="#222222" Margin="13" CornerRadius="10">
 
-        <TabControl Background="#3a3635"  x:Name="Listwa" HorizontalAlignment="Left" Height="543" VerticalAlignment="Top" Width="895" Margin="10,2,0,0" Padding="0,0,0,0" 
+        <TabControl Background="#222222"  x:Name="Listwa" HorizontalAlignment="Left" Height="543" VerticalAlignment="Top" Width="895" Margin="10,2,0,0" Padding="0,0,0,0" 
 >
             <TabItem Header="Listwa" Margin="-2,-5,2,4"  VerticalAlignment="Bottom" Foreground="#3a3635" Height="21" >
-                <Grid Background="#3a3635" Margin="-13,-23,-35.2,-39.6" >
+                <Grid Background="#222222" Margin="-13,-23,-35.2,-39.6" >
 
                     <Button x:Name="ButtonDodajListwe" Content="Dodaj Listwę" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="38,89,0,0" Height="34" Click="ButtonDodajListwe_Click"/>
                     <Button x:Name="ButtonUsunListwe" Content="Usuń" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="210,89,0,0" Height="34" RenderTransformOrigin="0.073,0.492" Click="ButtonUsunListwe_Click"/>
                     <Button x:Name="ButtonEdytujListwe" Content="Edytuj" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="392,89,0,0" Height="34" Click="ButtonEdytujListwe_Click"/>
-                    <DataGrid x:Name="dataGridListwa" HorizontalAlignment="Center"  VerticalAlignment="Top" Height="400" Width="850" SelectionChanged="TabelaListwa_SelectionChanged" Margin="38,155,53,0" ColumnWidth="*" x:FieldModifier="public"/>
+                    <DataGrid x:Name="dataGridListwa" HorizontalAlignment="Center"  VerticalAlignment="Top" Height="400" Width="850" SelectionChanged="TabelaListwa_SelectionChanged" Margin="40,155,51.2,0" ColumnWidth="*" x:FieldModifier="public"/>
                 </Grid>
             </TabItem>
 
 
             <TabItem Header="Paczka" Margin="0,-2,0,4" HorizontalAlignment="Left" Foreground="#3a3635" Height="19" VerticalAlignment="Bottom">
-                <Grid Background="#3a3635" Margin="-15,-28,-20.2,-34.6" >
+                <Grid Background="#222222" Margin="-15,-28,-20.2,-34.6" >
                     <DataGrid x:Name="dataGridPaczka" HorizontalAlignment="Center" Margin="38,159,48.2,0" VerticalAlignment="Top" Height="387" Width="842" ColumnWidth="*"  />
                 </Grid>
             </TabItem>
 
             <TabItem Header="Zamowienia" Margin="2,-3,-2,4" HorizontalAlignment="Left"  VerticalAlignment="Bottom" Foreground="#3a3635">
-                <Grid Background="#3a3635" Margin="-15,-28,-20.2,-34.6" >
+                <Grid Background="#222222" Margin="-15,-28,-20.2,-34.6" >
                     <DataGrid x:Name="dataGridZamowienie" HorizontalAlignment="Center" Margin="38,165,48.2,0" VerticalAlignment="Top" Height="387" Width="842" ColumnWidth="*"/>
                     <Button x:Name="buttonZlozZamowienie" Content="Zlóż Zamowienie" HorizontalAlignment="Left" Margin="38,108,0,0" VerticalAlignment="Top" Width="127" Click="buttonZlozZamowienie_Click" Height="29"/>
                     <Button x:Name="buttonSzczegolyZamowienia" Content="Szczegóły Zamówienia" HorizontalAlignment="Left" Margin="219,108,0,0" VerticalAlignment="Top" Width="128"  Height="29" Click="buttonSzczegolyZamowienia_Click"/>
@@ -50,7 +50,7 @@
             </TabItem>
 
             <TabItem Header="Zapytanie Raportowe" Margin="4,-3,-4,4" HorizontalAlignment="Left"  VerticalAlignment="Bottom" Foreground="#3a3635">
-                <Grid Background="#3a3635" Margin="-15,-24,-20,-39" >
+                <Grid Background="#222222" Margin="-15,-24,-20,-39" >
                     <DataGrid x:Name="dataGridRaport" HorizontalAlignment="Center" Margin="38,165,48.2,0" VerticalAlignment="Top" Height="387" Width="842" ColumnWidth="*"/>
                     <Button x:Name="buttonWykonaj" Content="Wykonaj" HorizontalAlignment="Left" Margin="753,119,0,0" VerticalAlignment="Top" Width="127"  Height="30" Click="buttonWykonaj_Click"/>
                     <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Margin="118,60,0,0" VerticalAlignment="Top" Width="381"/>

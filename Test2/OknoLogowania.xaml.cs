@@ -23,7 +23,7 @@ namespace Test2
     public partial class OknoLogowania : Window
     {
         //Wlasciwosci  
-        public static string MyConnectionString = "Server=localhost;Database=baza;port=3306;Uid=root;Pwd=password;SslMode=none";
+        public static string MyConnectionString = "Server=localhost;Database=magazyn2;port=3306;Uid=root;Pwd=bazydanych;SslMode=none";
         MySqlConnection polaczenie = new MySqlConnection(MyConnectionString);
         MySqlCommand komenda;
         public string zapytanieSQL;

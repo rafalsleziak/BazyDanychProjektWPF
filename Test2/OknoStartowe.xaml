@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Test2"
         mc:Ignorable="d"
-        Title="System Magazynowania" Height="345.267" Width="464" Background="#009999">
+        Title="System Magazynowania" Height="345.267" Width="464" Background="#269ccc">
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="Foreground" Value="White" />
@@ -25,7 +25,7 @@
 
     </Window.Resources>
 
-    <Border Background="#3a3635" Margin="11" CornerRadius="10">
+    <Border Background="#222222" Margin="11" CornerRadius="10">
         <Grid Margin="0,0,0.2,0.2">
             <Label x:Name="labelSystemMagazynowania" Content="System Magazynowania Listew" HorizontalAlignment="Center" VerticalAlignment="Top"  Width="202" Margin="113,5,113.6,0"/>
 

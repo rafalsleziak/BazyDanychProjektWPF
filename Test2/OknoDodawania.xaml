@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Test2"
         mc:Ignorable="d"
-        Title="Dodaj Listwe" Height="405" Width="377.6" Background="#009999">
+        Title="Dodaj Listwe" Height="405" Width="377.6" Background="#269ccc">
 
     <Window.Resources>
         <Style TargetType="TextBlock">
@@ -27,7 +27,7 @@
 
         </Style>
     </Window.Resources>
-    <Border Background="#3a3635" Margin="11" CornerRadius="10">
+    <Border Background="#222222" Margin="11" CornerRadius="10">
         <Grid Margin="0,1,0,-0.2">
             <TextBox x:Name="textBoxListwaSymbol" HorizontalAlignment="Left" Height="23" Margin="179,26,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
             <TextBox x:Name="textBoxListwaMaterial" HorizontalAlignment="Left" Height="23" Margin="179,68,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
